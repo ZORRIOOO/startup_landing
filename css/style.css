@@ -6,10 +6,6 @@ nav {
   height: 105px;
 }
 
-.header {
-  height: 105px;
-}
-
 .header_logo {
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
@@ -66,7 +62,7 @@ nav {
 }
 
 .promo_subtitle {
-  font-family: 'RobotoSlab', serif;
+  font-family: 'RobotoSlab', sans-serif;
   font-size: 20px;
   font-weight: 400;
   text-align: center;
@@ -89,7 +85,6 @@ nav {
   color: #ffffff;
   margin: 0 auto;
   margin-top: 50px;
-  outline: none;
 }
 
 .promo_btn:hover {
@@ -97,20 +92,16 @@ nav {
   background-color: #ffffff;
 }
 
-.services {
-  min-height: 578px;
-  padding: 100px 0 100px 0;
-}
-
-.services .title {
+.title {
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: 400;
   text-align: center;
   color: #555555;
+  text-transform: uppercase;
 }
 
-.services .divider {
+.divider {
   display: block;
   width: 50px;
   height: 2px;
@@ -119,13 +110,18 @@ nav {
   background-color: #555555;
 }
 
-.services .descr {
+.descr {
   margin-top: 28px;
-  font-family: 'RobotoSlab', serif;
+  font-family: 'RobotoSlab', sans-serif;
   font-size: 16px;
   font-weight: 400;
   text-align: center;
   color: #555555;
+}
+
+.services {
+  min-height: 578px;
+  padding: 100px 0 100px 0;
 }
 
 .services_menu-item {
@@ -141,7 +137,6 @@ nav {
   border: solid 2px #dddddd;
   background-color: #ffffff;
   border-radius: 100%;
-  outline: none;
 }
 
 .services_menu-btn .fa.fa-font::before {
@@ -186,12 +181,31 @@ nav {
 }
 
 .services_menu-descr {
-  font-family: 'RobotoSlab', serif;
+  font-family: 'RobotoSlab', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.71;
   text-align: center;
   color: #555555;
   margin-top: 24px;
+}
+
+.about {
+  min-height: 852px;
+  padding: 99px 0;
+  background-color: #f8f8f8;
+}
+
+.about_descr {
+  margin-top: 70px;
+}
+
+.about_descr-item {
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71;
+  text-align: left;
+  color: #555555;
 }
 /*# sourceMappingURL=style.css.map */
