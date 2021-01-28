@@ -144,9 +144,36 @@ nav {
   outline: none;
 }
 
+.services_menu-btn .fa.fa-font::before {
+  font-size: 40px;
+  color: #c0301c;
+}
+
+.services_menu-btn .fa.fa-code::before {
+  font-size: 40px;
+  color: #c0301c;
+}
+
+.services_menu-btn .fa.fa-life-ring::before {
+  font-size: 49px;
+  color: #c0301c;
+}
+
 .services_menu-btn:hover {
   background-color: #c0301c;
   outline: none;
+}
+
+.services_menu-btn:hover .fa.fa-font::before {
+  color: #ffffff;
+}
+
+.services_menu-btn:hover .fa.fa-code::before {
+  color: #ffffff;
+}
+
+.services_menu-btn:hover .fa.fa-life-ring::before {
+  color: #ffffff;
 }
 
 .services_menu-title {
