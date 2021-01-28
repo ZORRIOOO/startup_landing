@@ -168,5 +168,57 @@ nav
             line-height: 1.71
             text-align: left
             color: #555555
-
+    &_carousel
+        width: 100%
+        margin-top: 71px
+        position: relative
+        &-inner
+            overflow: hidden
+        &-track
+            display: flex
+            justify-content: space-between
+            transition: transform 0.5s
+        &-card
+            width: 263px
+            flex-shrink: 0
+            height: 304px
+            margin: 0 27.5px
+            .card
+                width: 100%
+                height: 250px
+                border: 1px solid #ccc
+        &-title
+            font-family: 'Montserrat', sans-serif
+            font-size: 14px
+            font-weight: 400
+            text-align: center
+            color: #555555
+            margin-top: 20px
+        &-subtitle
+            font-family: 'RobotoSlab', sans-serif
+            font-size: 13px
+            font-weight: 400
+            text-align: center
+            color: #555555
+            margin-top: 15px
+        &-nav
+            button
+                width: 60px
+                height: 60px
+                border: 1px solid #aaa
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                cursor: pointer
+            .prev
+                left: -30px
+                display: none
+            .prev.show
+                display: block
+            .next
+                right: -30px
+            .next.hide
+                display: none
+        
+    
 

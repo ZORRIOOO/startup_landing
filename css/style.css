@@ -208,4 +208,87 @@ nav {
   text-align: left;
   color: #555555;
 }
+
+.about_carousel {
+  width: 100%;
+  margin-top: 71px;
+  position: relative;
+}
+
+.about_carousel-inner {
+  overflow: hidden;
+}
+
+.about_carousel-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.about_carousel-card {
+  width: 263px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  height: 304px;
+  margin: 0 27.5px;
+}
+
+.about_carousel-card .card {
+  width: 100%;
+  height: 250px;
+  border: 1px solid #ccc;
+}
+
+.about_carousel-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: #555555;
+  margin-top: 20px;
+}
+
+.about_carousel-subtitle {
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  color: #555555;
+  margin-top: 15px;
+}
+
+.about_carousel-nav button {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #aaa;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.about_carousel-nav .prev {
+  left: -30px;
+  display: none;
+}
+
+.about_carousel-nav .prev.show {
+  display: block;
+}
+
+.about_carousel-nav .next {
+  right: -30px;
+}
+
+.about_carousel-nav .next.hide {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */
