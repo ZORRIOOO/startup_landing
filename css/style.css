@@ -125,7 +125,9 @@ nav {
 }
 
 .services_menu-item {
+  display: block;
   width: 345px;
+  margin: 0 auto;
 }
 
 .services_menu-btn {
@@ -209,86 +211,121 @@ nav {
   color: #555555;
 }
 
-.about_carousel {
-  width: 100%;
+.about .carousel {
   margin-top: 71px;
+}
+
+.about .carousel__view {
+  width: 100%;
+  min-height: 315px;
+  background: #f8f8f8;
+  margin: auto;
+  overflow: hidden;
   position: relative;
 }
 
-.about_carousel-inner {
-  overflow: hidden;
+.about .carousel__view .js-carousel-prev {
+  top: 35%;
+  left: 0;
 }
 
-.about_carousel-track {
+.about .carousel__view .js-carousel-next {
+  top: 35%;
+  right: 0;
+}
+
+.about .carousel__view .carousel__control {
+  position: absolute;
+  z-index: 1;
+  height: 35px;
+  width: 38px;
+  background-color: rgba(85, 85, 85, 0.5);
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.about .carousel__view .carousel__control:hover {
+  background-color: rgba(192, 48, 28, 0.8);
+}
+
+.about .carousel__view .carousel__control .arrow {
+  display: block;
+  text-align: center;
+  margin-top: 9px;
+  color: #f8f8f8;
+}
+
+.about .carousel__view .product-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-}
-
-.about_carousel-card {
-  width: 263px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  height: 304px;
-  margin: 0 27.5px;
-}
-
-.about_carousel-card .card {
-  width: 100%;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  list-style: none;
   height: 250px;
-  border: 1px solid #ccc;
 }
 
-.about_carousel-title {
+.about .carousel__view .product-list__item {
+  width: 263px;
+  min-height: 315px;
+  display: inline-block;
+}
+
+.about .carousel__view .product-list__item .product {
+  height: 250px;
+  width: 100%;
+}
+
+.about .carousel__view .product-list__item .product_1 {
+  background: url("../img/workers/worker_1.jpg") center center/cover no-repeat;
+}
+
+.about .carousel__view .product-list__item .product_2 {
+  background: url("../img/workers/worker_2.jpg") center center/cover no-repeat;
+}
+
+.about .carousel__view .product-list__item .product_3 {
+  background: url("../img/workers/worker_3.jpg") center center/cover no-repeat;
+}
+
+.about .carousel__view .product-list__item .product_4 {
+  background: url("../img/workers/worker_4.jpg") center center/cover no-repeat;
+}
+
+.about .carousel__view .product-list__item .product_5 {
+  background: url("../img/workers/worker_1.jpg") center center/cover no-repeat;
+}
+
+.about .carousel__view .product-list__item .product_6 {
+  background: url("../img/workers/worker_2.jpg") center center/cover no-repeat;
+}
+
+.about .carousel__view .product-list__item .worker {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 400;
   text-align: center;
   color: #555555;
   margin-top: 20px;
+  z-index: 5;
 }
 
-.about_carousel-subtitle {
+.about .carousel__view .product-list__item .position {
   font-family: 'RobotoSlab', sans-serif;
   font-size: 13px;
   font-weight: 400;
   text-align: center;
   color: #555555;
   margin-top: 15px;
-}
-
-.about_carousel-nav button {
-  width: 60px;
-  height: 60px;
-  border: 1px solid #aaa;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.about_carousel-nav .prev {
-  left: -30px;
-  display: none;
-}
-
-.about_carousel-nav .prev.show {
-  display: block;
-}
-
-.about_carousel-nav .next {
-  right: -30px;
-}
-
-.about_carousel-nav .next.hide {
-  display: none;
 }
 /*# sourceMappingURL=style.css.map */

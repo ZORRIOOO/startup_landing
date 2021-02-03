@@ -1,31 +1,45 @@
-const prev  = document.querySelector('.prev');
-const next = document.querySelector('.next');
-
-const track = document.querySelector('.about_carousel-track');
-
-let carouselWidth = document.querySelector('.about_carousel').offsetWidth;
-
-window.addEventListener('resize', () => {
-  carouselWidth = document.querySelector('.about_carousel').offsetWidth;
-})
-
-let index = 0;
-
-next.addEventListener('click', () => {
-  index++;
-  prev.classList.add('show');
-  track.style.transform = `translateX(-${index * carouselWidth}px)`;
+(function() {
+  var carousels = document.querySelectorAll('.js-product-carousel');
   
-  if (track.offsetWidth - (index * carouselWidth) < carouselWidth) {
-    next.classList.add('hide');
-  }
-})
+  [].forEach.call(carousels, function(carousel) {
+    carouselize(carousel);
+  });
+  
+})();
 
-prev.addEventListener('click', () => {
-  index--;
-  next.classList.remove('hide');
-  if (index === 0) {
-    prev.classList.remove('show');
+function carouselize(carousel) {
+  var productList = carousel.querySelector('.js-product-list');
+  var productListWidth = 0;
+  var productListSteps = 0;
+  var products = carousel.querySelectorAll('.product');
+  var productAmount = 0;
+  var productAmountVisible = 4;
+  var carouselPrev = carousel.querySelector('.js-carousel-prev');
+  var carouselNext = carousel.querySelector('.js-carousel-next');
+
+  //Count all the products
+  [].forEach.call(products, function(product) {
+    productAmount++;
+    productListWidth += 330.85;
+    productList.style.width = productListWidth + "px";
+  });
+
+  carouselNext.onclick = function() {
+    if(productListSteps < productAmount - productAmountVisible) {
+      productListSteps++;
+      moveProductList();
+    }
   }
-  track.style.transform = `translateX(-${index * carouselWidth}px)`;
-})
+  carouselPrev.onclick = function() {
+    if(productListSteps > 0) {
+      productListSteps--;
+      moveProductList();
+    }
+  }
+  
+  // This is a bit hacky, let me know if you find a better way to do this!
+  // Move the carousels product-list
+  function moveProductList() {
+    productList.style.transform = "translateX(-" + 345 * productListSteps + "px)";
+  }
+}

@@ -24,7 +24,7 @@
     font-weight: 400
     text-align: center
     color: #555555
-    
+
 *:focus 
     outline: 0 !important
 
@@ -105,7 +105,9 @@ nav
     padding: 100px 0 100px 0
     &_menu
         &-item
+            display: block
             width: 345px
+            margin: 0 auto
         &-btn
             display: block
             width: 90px
@@ -168,57 +170,80 @@ nav
             line-height: 1.71
             text-align: left
             color: #555555
-    &_carousel
-        width: 100%
+    .carousel
         margin-top: 71px
-        position: relative
-        &-inner
+        &__view
+            width: 100%
+            min-height: 315px
+            background: #f8f8f8
+            margin: auto
             overflow: hidden
-        &-track
-            display: flex
-            justify-content: space-between
-            transition: transform 0.5s
-        &-card
-            width: 263px
-            flex-shrink: 0
-            height: 304px
-            margin: 0 27.5px
-            .card
-                width: 100%
-                height: 250px
-                border: 1px solid #ccc
-        &-title
-            font-family: 'Montserrat', sans-serif
-            font-size: 14px
-            font-weight: 400
-            text-align: center
-            color: #555555
-            margin-top: 20px
-        &-subtitle
-            font-family: 'RobotoSlab', sans-serif
-            font-size: 13px
-            font-weight: 400
-            text-align: center
-            color: #555555
-            margin-top: 15px
-        &-nav
-            button
-                width: 60px
-                height: 60px
-                border: 1px solid #aaa
+            position: relative
+            .js-carousel-prev
+                top: 35%
+                left: 0
+            .js-carousel-next
+                top: 35%
+                right: 0 
+            .carousel__control
                 position: absolute
-                top: 50%
-                transform: translateY(-50%)
-                cursor: pointer
-            .prev
-                left: -30px
-                display: none
-            .prev.show
-                display: block
-            .next
-                right: -30px
-            .next.hide
-                display: none
+                z-index: 1
+                height: 35px
+                width: 38px
+                background-color: rgba(#555555,.5)
+                transition: background-color .3s
+                &:hover
+                    background-color: rgba(#c0301c,.8)
+                .arrow
+                    display: block
+                    text-align: center
+                    margin-top: 9px
+                    color: #f8f8f8
+            .product-list
+                display: flex
+                justify-content: space-between
+                position: absolute
+                margin: 0
+                padding: 0
+                transition: transform .3s
+                transform: translateX(0px)
+                list-style: none
+                height: 250px
+                &__item 
+                    width: 263px
+                    min-height: 315px
+                    display: inline-block
+                    .product 
+                        height: 250px
+                        width: 100%
+                        &_1
+                            background: url('../img/workers/worker_1.jpg') center center/cover no-repeat
+                        &_2
+                            background: url('../img/workers/worker_2.jpg') center center/cover no-repeat
+                        &_3
+                            background: url('../img/workers/worker_3.jpg') center center/cover no-repeat
+                        &_4
+                            background: url('../img/workers/worker_4.jpg') center center/cover no-repeat
+                        &_5
+                            background: url('../img/workers/worker_1.jpg') center center/cover no-repeat
+                        &_6
+                            background: url('../img/workers/worker_2.jpg') center center/cover no-repeat
+                    .worker
+                        font-family: 'Montserrat', sans-serif
+                        font-size: 14px
+                        font-weight: 400
+                        text-align: center;
+                        color: #555555;
+                        margin-top: 20px
+                        z-index: 5
+                    .position
+                        font-family: 'RobotoSlab', sans-serif
+                        font-size: 13px
+                        font-weight: 400
+                        text-align: center
+                        color: #555555
+                        margin-top: 15px
+            
         
     
 
