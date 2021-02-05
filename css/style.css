@@ -284,6 +284,9 @@ nav {
 .about .carousel__view .product-list__item .product {
   height: 250px;
   width: 100%;
+  position: relative;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
 }
 
 .about .carousel__view .product-list__item .product_1 {
@@ -327,5 +330,55 @@ nav {
   text-align: center;
   color: #555555;
   margin-top: 15px;
+}
+
+.effect {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.effect_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 112px;
+  height: 28px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 auto;
+}
+
+.effect_wrapper-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 28px;
+  height: 28px;
+  margin-top: 190px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.effect_wrapper-item:hover {
+  background-color: #c0301c;
+}
+
+.effect_wrapper-item .fab {
+  color: #ffffff;
+}
+
+.effect:hover {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
